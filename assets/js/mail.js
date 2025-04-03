@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".button2").addEventListener("click", function (event) {
-        event.preventDefault(); // ফর্ম সাবমিট হওয়া বন্ধ করো
+        event.preventDefault(); 
 
         let name = document.querySelector("input[name='name']").value.trim();
         let email = document.querySelector("input[name='email']").value.trim();
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(function (response) {
             swal("Success!", "Your message has been sent successfully.", "success");
             console.log("Success:", response);
-            document.getElementById("contact-form").reset(); // ফর্ম রিসেট করো
+            document.getElementById("contact-form").reset(); 
         }, function (error) {
             swal("Error!", "Failed to send message. Please try again later.", "error");
             console.log("Error:", error);
