@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".button2").addEventListener("click", function (event) {
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
         event.preventDefault(); 
 
         let name = document.querySelector("input[name='name']").value.trim();
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        // EmailJS initialization (ensure it's included in HTML)
         emailjs.send("service_tlqg9g4", "template_bt34c2o", {
             from_name: name,
             from_email: email,
@@ -22,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
             swal("Success!", "Your message has been sent successfully.", "success");
             console.log("Success:", response);
             document.getElementById("contact-form").reset(); 
-        }, function (error) {
+        })
+        .catch(function (error) {
             swal("Error!", "Failed to send message. Please try again later.", "error");
-            console.log("Error:", error);
+            console.error("Error:", error);
         });
     });
 });
