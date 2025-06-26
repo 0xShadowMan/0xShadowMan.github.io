@@ -31,10 +31,13 @@ Decept it =
 01011001 00110010 01010110 01111010
 01100011 01110111 00111101 00111101
 
-and secret massege for MR.P:
+--------------------------------------------------
+and a secret message for MR.P:
 
-1. aHR0cHM6Ly9pLnBvc3Rpb
+1. NB2HI4DTHIXS64DPON2GS3L
 
+NOTE: this is a two-part only 
+--------------------------------------------------
 
 
 
